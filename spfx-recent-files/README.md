@@ -4,7 +4,7 @@
 
 Sample SharePoint Framework web part that shows the recently modified files on OneDrive.
 
-![SPFX File Explorer in action](./assets/TODO.gif)
+![SPFX File Explorer in action](./assets/Recent-Files-Web-Part.gif)
 
 ## Used SharePoint Framework Version
 
