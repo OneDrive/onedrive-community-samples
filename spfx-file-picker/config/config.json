@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "file-picker-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/filePicker/FilePickerWebPart.js",
+          "manifest": "./src/webparts/filePicker/FilePickerWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "OneDriveExternal": {
+      "path": "https://js.live.net/v7.2/OneDrive.js",
+      "globalName": "OneDriveExternal"
+    }
+  },
+  "localizedResources": {
+    "FilePickerWebPartStrings": "lib/webparts/filePicker/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}
