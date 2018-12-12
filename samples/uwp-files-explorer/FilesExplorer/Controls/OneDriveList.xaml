@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="FilesExplorer.Controls.OneDriveList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:FilesExplorer.Controls"
+             xmlns:models="using:FilesExplorer.Models"
+             xmlns:converters="using:FilesExplorer.Converters"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="400">
+    <UserControl.Resources>
+        <Style x:Key="IconStyle"
+               TargetType="SymbolIcon">
+            <Setter Property="IsHitTestVisible"
+                    Value="False" />
+            <Setter Property="RenderTransformOrigin"
+                    Value="0.5,0.5" />
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="3"
+                                    ScaleY="3" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <DataTemplate x:Key="OneDriveFolder"
+                      x:DataType="models:OneDriveFolder">
+            <Grid Width="100"
+                  Height="100"
+                  Background="Transparent"
+                  Margin="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <SymbolIcon Symbol="Folder"
+                            Style="{StaticResource IconStyle}" />
+                <TextBlock Grid.Row="1"
+                           Text="{x:Bind Name}"
+                           FontSize="12"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           TextTrimming="CharacterEllipsis"
+                           TextWrapping="Wrap" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="OneDriveFile"
+                      x:DataType="models:OneDriveFile">
+            <Grid Width="100"
+                  Height="100"
+                  Background="Transparent"
+                  Margin="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <SymbolIcon Symbol="OpenFile"
+                            Style="{StaticResource IconStyle}" />
+                <Image Source="{x:Bind Thumbnail}"
+                       Stretch="UniformToFill" />
+                <TextBlock Grid.Row="1"
+                           Text="{x:Bind Name}"
+                           FontSize="12"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           TextTrimming="CharacterEllipsis"
+                           TextWrapping="Wrap" />
+            </Grid>
+        </DataTemplate>
+        <converters:ImplicitDataTemplateSelector x:Key="ImplicitDataTemplateSelector">
+            <converters:ImplicitDataTemplateSelector.Templates>
+                <StaticResource x:Key="OneDriveFolder"
+                                ResourceKey="OneDriveFolder" />
+                <StaticResource x:Key="OneDriveFile"
+                                ResourceKey="OneDriveFile" />
+            </converters:ImplicitDataTemplateSelector.Templates>
+        </converters:ImplicitDataTemplateSelector>
+    </UserControl.Resources>
+
+    <GridView x:Name="items"
+              IsItemClickEnabled="True"
+              SelectionMode="None"
+              ItemClick="Items_Click"
+              ItemTemplateSelector="{StaticResource ImplicitDataTemplateSelector}">
+
+    </GridView>
+</UserControl>

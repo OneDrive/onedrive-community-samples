@@ -1,0 +1,64 @@
+﻿<Page x:Class="FilesExplorer.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:FilesExplorer"
+      xmlns:controls="using:FilesExplorer.Controls"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      x:Name="page"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.TopAppBar>
+        <CommandBar IsOpen="True"
+                    DefaultLabelPosition="Right">
+            <AppBarButton Icon="Refresh"
+                          x:Name="refresh"
+                          Label="Refresh folder"
+                          Click="Refresh_Click" />
+            <AppBarButton Icon="Up"
+                          x:Name="up"
+                          Label="Up folder"
+                          Click="Up_Click" />
+            <AppBarButton Icon="Upload"
+                          x:Name="upload"
+                          Label="Upload file"
+                          Click="Upload_Click" />
+            <AppBarSeparator />
+            <AppBarButton Icon="Permissions"
+                          x:Name="connect"
+                          Click="Connect_Click"
+                          Label="Connect" />
+        </CommandBar>
+    </Page.TopAppBar>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="150" />
+        </Grid.RowDefinitions>
+
+        <ProgressBar IsIndeterminate="True"
+                     x:Name="progressBar" />
+
+        <TextBlock x:Name="instructions"
+                   Grid.Row="1"
+                   Margin="10"
+                   Style="{StaticResource SubtitleTextBlockStyle}"></TextBlock>
+
+        <controls:OneDriveList x:Name="list"
+                               Grid.Row="2"
+                               AuthenticationService="{x:Bind AuthenticationService}"
+                               LoadingError="Controls_Error"
+                               FolderLoaded="list_FolderLoaded"
+                               FolderLoading="list_FolderLoading"
+                               DownloadFile="list_DownloadFile" />
+
+        <controls:OneDriveProgress x:Name="progress"
+                                   Error="Controls_Error"
+                                   AuthenticationService="{x:Bind AuthenticationService}"
+                                   Grid.Row="3" />
+
+    </Grid>
+</Page>
