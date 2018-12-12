@@ -1,0 +1,12 @@
+﻿<Application
+    x:Class="FilesExplorer.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FilesExplorer">
+    <Application.Resources>
+        <!--
+        Please refer to https://docs.microsoft.com/en-us/onedrive/developer/rest-api/getting-started/app-registration for instructions
+        -->
+        <x:String x:Key="ClientId">paste client id here</x:String>        
+    </Application.Resources>
+</Application>

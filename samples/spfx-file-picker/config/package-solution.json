@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-file-picker-client-side-solution",
+    "id": "687f1470-f340-4eb9-9f7e-c1d8226e3bab",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-file-picker.sppkg"
+  }
+}
