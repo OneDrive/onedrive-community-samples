@@ -1,0 +1,38 @@
+﻿@model PnpFileHandler.Models.HomeModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>OneDrive and SharePoint Online File Handler - PnP viewer</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            This sample provides a few examples of how you can integrate your application with OneDrive for Business and SharePoint through File Handlers.
+            This file handler allows to preview the PnP files
+        </p>
+    </div>
+    @if (!string.IsNullOrEmpty(Model.SignInName))
+    {
+        <div class="col-md-4">
+            <h2>Signed In</h2>
+            <p>Welcome @Model.DisplayName. To try out PnP viewer, hop over to <a href="@Model.OneDriveUrl">your OneDrive and try it out!</a></p>
+            <p><a class="btn btn-default" href="@Model.OneDriveUrl">Try it in OneDrive &raquo;</a></p>
+        </div>
+    }
+    else
+    {
+        <div class="col-md-4">
+            <h2>User Sign-In</h2>
+            <p>@Html.ActionLink("Sign in as a user", "SignIn", "Account") to enable the file handler extension on your account.</p>
+      </div>
+    }
+
+    <div class="col-md-4">
+        <h2>Admin Sign-In</h2>
+        <p>@Html.ActionLink("Sign in as an admin", "SignInAdmin", "Account") to enable the file handler extension for your entire organization.</p>
+    </div>
+</div>

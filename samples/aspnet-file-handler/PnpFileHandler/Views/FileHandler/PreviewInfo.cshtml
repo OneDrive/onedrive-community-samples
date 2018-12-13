@@ -1,0 +1,16 @@
+﻿@model PnpFileHandler.Models.PnpFilePreviewModel
+@{
+    Layout = null;
+}
+<h3>Available templates:</h3>
+<ul>
+    @foreach (var template in Model.Templates)
+    {
+    <li>
+        <h4>@template.DisplayName</h4>
+        <object data="@template.ImagePreviewUrl" type="image/png" class="img-thumbnail template-icon">
+            <img src="~/content/SharePoint-PnP-Icon.png" class="template-icon" >
+        </object>
+    </li>
+    }
+</ul>
