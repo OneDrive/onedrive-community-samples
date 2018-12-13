@@ -1,0 +1,29 @@
+﻿@model PnpFileHandler.Models.PnpFileModel
+@{
+    Layout = "~/Views/Shared/_LayoutFileHandler.cshtml";
+    ViewBag.Title = Model.Title;
+    ViewBag.HideNavigationBar = true;
+}
+
+@if (Model.ErrorMessage != null)
+{
+
+    <h4>Unable to generate a preview</h4>
+    <p>@Model.ErrorMessage</p>
+}
+else
+{
+    <div class="jumbotron">
+        <h1>@Model.Title</h1>
+    </div>
+    <div id="preview">
+        <h1>Loading...</h1>
+    </div>
+
+    @section Scripts
+    {
+      <script>
+        $("#preview").load('@Html.Raw(Model.PreviewUri)');
+      </script>
+    }
+}

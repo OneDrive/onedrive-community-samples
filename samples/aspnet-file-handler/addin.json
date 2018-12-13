@@ -1,0 +1,27 @@
+{
+  "odata.metadata": "https://graph.windows.net/myorganization/$metadata#Collection(Microsoft.DirectoryServices.AddIn)",
+  "value": [
+    {
+      "id": "7BE1E84A-DF57-43FF-B1C7-3FF8C7631F98",
+      "type": "FileHandler",
+      "properties": [
+        {
+          "key": "version",
+          "value": "2"
+        },
+        {
+          "key": "fileTypeDisplayName",
+          "value": "Sharepoint PnP"
+        },
+        {
+          "key": "fileTypeIconUrl",
+          "value": "https://localhost:44344/content/SharePoint-PnP-Icon.png"
+        },
+        {
+          "key": "actions",
+          "value": "[{\"type\":\"preview\",\"url\":\"https://localhost:44344/filehandler/preview\",\"availableOn\":{\"file\":{\"extensions\":[\".pnp\"]}}}]"
+        }
+      ]
+    }
+  ]
+}

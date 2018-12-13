@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script type="text/javascript">
+    function launchOneDrivePicker() {
+        $("#selectedThumbnailImg").attr("src", "");
+
+        var odOptions = {
+            clientId: "ENTER_YOUR_APP_ID",
+            action: "query",
+            multiSelect: false,
+            advanced: {
+                filter: ".png,.jpg,.jpeg",
+                queryParameters: "select=id"
+            },
+            success: function (response) {
+                if (response && response.value.length > 0) {
+                    $.ajax({
+                        type: 'POST',
+                        url: '@Url.Action("Index", "Home")',
+                        data: {
+                            AccessToken: response.accessToken,
+                            FileId: response.value[0].id,
+                            DriveId: response.value[0].parentReference.driveId
+                        },
+                        success: function (result) {
+                            $("#selectedThumbnailImg").attr("src", result);
+                            console.log('Data received: ');
+                            console.log(result);
+                        }
+                    });
+                }
+            },
+            cancel: function () { alert('Operation cancelled'); },
+            error: function (e) { alert('An error occourred: ' + e); }
+        }
+
+    OneDrive.open(odOptions);
+  }
+</script>
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>ASP.NET File Picker</h2>
+        <button onClick="launchOneDrivePicker()">Open from OneDrive</button>
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-md-3">
+        <img id="selectedThumbnailImg" />
+    </div>
+</div>
