@@ -1,0 +1,48 @@
+﻿@model IndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="text-center">
+        <h4 class="display-4">Your root drive files</h4>
+    </div>
+    <p>
+        Below you find the list of files that has been changed recently. You can now change one or more file and get the delta from the latest time you pressed the following button.<br />
+        <form asp-action="index">
+            <input type="hidden" name="DeltaToken" value="@Model.DeltaToken" />
+            <input class="btn btn-primary" type="submit" value="Show changed files" />
+        </form>
+    </p>
+    @if (Model.Items.Count > 0)
+    {
+        <ul>
+            @foreach (var item in Model.Items)
+            {
+                <li>
+                    @if (item.Deleted != null)
+                    {
+                        <span>Deleted file with id <i>@item.Id</i></span>
+                    }
+                    else
+                    {
+                        <a href="@item.WebUrl" target="_blank">@item.Name</a> <i><small>@item.LastModifiedDateTime.GetValueOrDefault().ToString("f")</small></i>
+                    }
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p><b>No changes from last query</b></p>
+    }
+    <p>Please check the <a href="https://docs.microsoft.com/en-us/graph/api/driveitem-delta">documentation</a> to know more about delta feature.</p>
+}
+else
+{
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>This samples shows how to query changes made on OneDrive for Business root drive. Please <a asp-action="signin" asp-controller="account">sign in</a> in order to see your files.</p>
+    </div>
+}
