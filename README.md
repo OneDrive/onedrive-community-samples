@@ -3,6 +3,8 @@
 
 This is the main repository for the community samples about leveraging Microsoft OneDrive and Microsoft SharePoint content (files and folders).
 
+> We do welcome community contributions to the samples folder in this repository for demonstrating different use cases targeted on OneDrive development topics. You sample can demonstrate capabilities on the [File Pickers](https://docs.microsoft.com/en-us/onedrive/developer/controls/file-pickers/?view=odsp-graph-online), [File Handlers](https://docs.microsoft.com/en-us/onedrive/developer/file-handlers/?view=odsp-graph-online) or [Files and Folders Microsoft Graph APIs](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/?view=odsp-graph-online). 
+
 ## Available Samples
 Here you can find the list of samples available in this repository.
 
@@ -18,6 +20,7 @@ Here you can find the list of samples available in this repository.
 In order to install and play with any of the above samples, follow the instructions provided in each of the corresponding folders.
 
 ## Contributions
+
 This repository welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
 the rights to use your contribution. For details, visit https://cla.microsoft.com.
@@ -29,3 +32,5 @@ provided by the bot. You will only need to do this once across all repos using o
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+> Sharing is caring!
