@@ -1,7 +1,24 @@
 
-# Contributing
+# OneDrive Community Samples
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+This is the main repository for the community samples about leveraging Microsoft OneDrive and Microsoft SharePoint content (files and folders).
+
+## Available Samples
+Here you can find the list of samples available in this repository.
+
+|Sample|Description|Technology/Platform|
+|------|-----------|---------------|
+|[aspnet-core-changed-files-delta](./samples/aspnet-core-changed-files-delta)|Sample to learn how to use the delta changes functionality of OneDrive and/or SharePoint Online in Microsoft Graph|ASP.NET Core
+|[aspnet-file-handler](./samples/aspnet-file-handler)|Sample to see how to implement a custom file handler for OneDrive and/or SharePoint Online|ASP.NET
+|[dotnet-core-file-picker](./samples/dotnet-core-file-picker)|Sample to learn how to create a custom file picker for OneDrive and/or SharePoint Online|.NET Core
+|[spfx-file-picker](./samples/spfx-file-picker)|Sample to learn how to create a custom file picker within a SharePoint Framework web part|SharePoint Framework
+|[spfx-recent-files](./samples/spfx-recent-files)|Sample about how to use the Microsoft Graph to query OneDrive and/or SharePoint Online|SharePoint Framework
+|[uwp-files-explorer](./samples/uwp-files-explorer)|Sample to learn how to build a Universal Windows Platform applicaiton to consume OneDrive and/or SharePoint Online|UWP
+
+In order to install and play with any of the above samples, follow the instructions provided in each of the corresponding folders.
+
+## Contributions
+This repository welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
 the rights to use your contribution. For details, visit https://cla.microsoft.com.
 
