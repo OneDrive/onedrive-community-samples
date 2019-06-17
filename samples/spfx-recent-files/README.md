@@ -66,6 +66,6 @@ This sample illustrates the following concepts on top of the SharePoint Framewor
 
 * using Office UI Fabric React to build SharePoint Framework web part that seamlessly integrate with SharePoint
 * using React to build SharePoint Framework web part
-* displaying the recent documents using OneDrive
+* displaying the recent documents using OneDrive 
 
 <img src="https://telemetry.sharepointpnp.com/onedrive-community-samples/samples/spfx-recent-files" />
