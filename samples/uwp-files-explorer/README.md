@@ -64,3 +64,5 @@ For more information about Microsoft Graph API, see [Microsoft Graph](https://gr
 ## License
 
 See [License](LICENSE.txt) for the license agreement covering this sample code.
+
+<img src="https://telemetry.sharepointpnp.com/onedrive-community-samples/samples/uwp-files-explorer" />

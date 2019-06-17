@@ -105,6 +105,4 @@ For more information check out:
 - [Microsoft Graph](https://graph.microsoft.com)
 - [SharePoint Patterns and Practices](https://github.com/SharePoint/PnP)
 
-## License
-
-See [License](LICENSE.txt) for the license agreement covering this sample code.
+<img src="https://telemetry.sharepointpnp.com/onedrive-community-samples/samples/aspnet-file-handler" />
