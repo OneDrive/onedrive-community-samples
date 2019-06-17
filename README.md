@@ -6,6 +6,7 @@ This is the main repository for the community samples about leveraging Microsoft
 > We do welcome community contributions to the samples folder in this repository for demonstrating different use cases targeted on OneDrive development topics. You sample can demonstrate capabilities on the [File Pickers](https://docs.microsoft.com/en-us/onedrive/developer/controls/file-pickers/?view=odsp-graph-online), [File Handlers](https://docs.microsoft.com/en-us/onedrive/developer/file-handlers/?view=odsp-graph-online) or [Files and Folders Microsoft Graph APIs](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/?view=odsp-graph-online). 
 
 ## Available Samples
+
 Here you can find the list of samples available in this repository.
 
 |Sample|Description|Technology/Platform|
@@ -17,7 +18,30 @@ Here you can find the list of samples available in this repository.
 |[spfx-recent-files](./samples/spfx-recent-files)|Sample about how to use the Microsoft Graph to query OneDrive and/or SharePoint Online|SharePoint Framework
 |[uwp-files-explorer](./samples/uwp-files-explorer)|Sample to learn how to build a Universal Windows Platform applicaiton to consume OneDrive and/or SharePoint Online|UWP
 
-In order to install and play with any of the above samples, follow the instructions provided in each of the corresponding folders.
+## Using the Samples
+
+To build and start using these projects, you'll need to clone and build the projects.
+
+Clone this repository by executing the following command in your console:
+
+```shell
+git clone https://github.com/OneDrive/onedrive-community-samples.git
+```
+
+Navigate to the cloned repository folder which should be the same as the repository name:
+
+```shell
+cd onedrive-community-samples
+```
+
+To access the samples use the following command, where you replace `sample-folder-name` with the name of the sample you want to access.
+
+```shell
+cd samples
+cd sample-folder-name
+```
+
+Follow the instructions within each sample's `README.md` for how to get the sample working. This repository contains many different types of projects & technologies as well as pre-requisites so each could have a different process to get working.
 
 ## Contributions
 

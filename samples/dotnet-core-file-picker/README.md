@@ -80,4 +80,4 @@ The following files contain code that's related to connecting to Microsoft Graph
 
 * [`Index.cshtml`](ASPNET-File-Picker/Views/Home/Index.cshtml) Contains the sample's UI to open the popup that allows the image selection.
 
-
+<img src="https://telemetry.sharepointpnp.com/onedrive-community-samples/samples/dotnet-core-file-picker" />

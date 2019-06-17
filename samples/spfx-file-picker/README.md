@@ -84,3 +84,5 @@ This sample illustrates the following concepts on top of the SharePoint Framewor
 * using Office UI Fabric React to build SharePoint Framework web part that seamlessly integrate with SharePoint
 * using React to build SharePoint Framework web part
 * selecting and displaying the images using OneDrive
+
+<img src="https://telemetry.sharepointpnp.com/onedrive-community-samples/samples/spfx-file-picker" />

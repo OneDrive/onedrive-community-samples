@@ -1,6 +1,9 @@
 # OneDrive for Business - track changes for a Drive
+
 This sample show how use the [delta API](https://docs.microsoft.com/en-us/graph/api/driveitem-delta) in order to track changes to a drive and its children over time.
+
 ![](demo.gif)
+
 ## Prerequisites
 
 To use the sample you need the following:
@@ -53,6 +56,7 @@ To use the sample you need the following:
 
 8. Click **Authentication** from the current blade navigation pane.
    1. Select 'ID tokens'
+
 9. Click **API permissions** from the current blade navigation pane.
 
    1. Click **Add a permission** from the current blade content.
@@ -89,3 +93,5 @@ To use the sample you need the following:
 7. Change one or more files into you OneDrive for Business personal storage.
 
 8. Press _Show changed files_ button in order to see the list of the changed files.
+
+<img src="https://telemetry.sharepointpnp.com/onedrive-community-samples/samples/aspnet-core-changed-files-delta" />
