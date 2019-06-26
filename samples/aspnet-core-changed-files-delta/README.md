@@ -82,16 +82,18 @@ To use the sample you need the following:
 
    b. For the **AppSecret** key, replace `ENTER_YOUR_SECRET` with the password of your registered application. Note that in production apps you should always use certificates as your application secrets, but for this sample we will use a simple shared secret password.
 
-4. Press F5 to build and run the sample. This will restore NuGet package dependencies and open the app.
+4. In Solution Explorer, open the **launchSettings.json** file in the Properties group and configure the setting iisSettings/iisExpress/sslPort with value 44329, then save and close the file.
+
+5. Press F5 to build and run the sample. This will restore NuGet package dependencies and open the app.
 
    > If you see any errors while installing packages, make sure the local path where you placed the solution is not too long/deep. Moving the solution closer to the root of your drive resolves this issue.
 
-5. Sign in with your work or school account and grant the requested permissions.
+6. Sign in with your work or school account and grant the requested permissions.
 
-6. You should see the list of your recent files.
+7. You should see the list of your recent files.
 
-7. Change one or more files into you OneDrive for Business personal storage.
+8. Change one or more files into you OneDrive for Business personal storage.
 
-8. Press _Show changed files_ button in order to see the list of the changed files.
+9. Press _Show changed files_ button in order to see the list of the changed files.
 
 <img src="https://telemetry.sharepointpnp.com/onedrive-community-samples/samples/aspnet-core-changed-files-delta" />
